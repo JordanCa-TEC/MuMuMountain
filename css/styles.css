@@ -1,0 +1,87 @@
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #A5E0E7;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #A5E0E7;
+}
+.header__logo-image {
+  max-height: 50px;
+}
+.header__nav-list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.header__nav-list__nav-item {
+  margin-left: 1rem;
+}
+.header__nav-list__nav-link {
+  text-decoration: none;
+  color: #333;
+}
+.header__nav-list__nav-link:hover {
+  color: #ffffff;
+}
+
+.main .intro {
+  text-align: center;
+  padding: 2rem;
+}
+.main .intro__title {
+  font-size: 2rem;
+  color: #A5E0E7;
+}
+.main .intro__juices {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+.main .intro__juices .intro__juice {
+  width: 15%;
+  margin: 0 1rem;
+}
+.main .healthy {
+  text-align: center;
+  padding: 2rem;
+  background-color: #d36b6b;
+  color: #ffffff;
+}
+.main .healthy__title {
+  font-size: 1.5rem;
+}
+.main .healthy__description {
+  margin: 1rem 0;
+}
+.main .healthy__link {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #ffffff;
+  color: #d36b6b;
+  text-decoration: none;
+}
+.main .healthy__link:hover {
+  background-color: #e6e6e6;
+}
+
+.footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #ffffff;
+  color: #d36b6b;
+}
+.footer__contact {
+  margin-top: 1rem;
+}
+.footer__contact__contact-item {
+  margin: 0;
+}/*# sourceMappingURL=styles.css.map */

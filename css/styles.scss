@@ -1,0 +1,110 @@
+$primary-color: #A5E0E7;
+$secondary-color: #ffffff;
+$text-color: #333;
+$background-color: #d36b6b;
+$font-stack: 'Arial', sans-serif;
+
+body {
+    font-family: $font-stack;
+    background-color: $primary-color;
+    color: $text-color;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: $primary-color;
+
+    &__logo-image {
+        max-height: 50px;
+    }
+
+    &__nav-list {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        &__nav-item {
+            margin-left: 1rem;
+        }
+
+        &__nav-link {
+            text-decoration: none;
+            color: $text-color;
+
+            &:hover {
+                color: $secondary-color;
+            }
+        }
+    }
+}
+
+.main {
+    .intro {
+        text-align: center;
+        padding: 2rem;
+
+        &__title {
+            font-size: 2rem;
+            color: $primary-color;
+        }
+
+        &__juices {
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+
+            .intro__juice {
+                width: 15%;
+                margin: 0 1rem;
+            }
+        }
+    }
+
+    .healthy {
+        text-align: center;
+        padding: 2rem;
+        background-color: $background-color;
+        color: $secondary-color;
+
+        &__title {
+            font-size: 1.5rem;
+        }
+
+        &__description {
+            margin: 1rem 0;
+        }
+
+        &__link {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background-color: $secondary-color;
+            color: $background-color;
+            text-decoration: none;
+
+            &:hover {
+                background-color: darken($secondary-color, 10%);
+            }
+        }
+    }
+}
+
+.footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: $secondary-color;
+    color: $background-color;
+
+    &__contact {
+        margin-top: 1rem;
+
+        &__contact-item {
+            margin: 0;
+        }
+    }
+}
