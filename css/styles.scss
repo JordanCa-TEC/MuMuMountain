@@ -44,29 +44,29 @@ body {
     }
 }
 
+
 .main {
     .intro {
-        text-align: center;
+        display: flex; 
+        align-items: center; 
+        justify-content: center;
         padding: 2rem;
-        background-image: linear-gradient(rgba(165, 224, 231) 70%, rgba(255, 255, 255, 0) 30%),
-                  url("../img/background-texture.jpg");
-
+        background-image: linear-gradient(rgba(165, 224, 231) 70%, rgba(255, 255, 255, 0) 30%), url("../img/background-texture.jpg");
+        
         &__title {
-            font-size: 2rem;
+            font-size: 4rem;
+            width: 40%;
             color: $secondary-color;
+            margin-right: 2rem; 
         }
 
-        &__juices {
-            display: flex;
-            justify-content: center;
-            margin-top: 1rem;
-
-            .intro__juice {
-                width: 35%;
-                margin: 0 1rem;
-            }
+        .intro__juice-img {
+            width: 35%;
+            margin: 0 1rem;
         }
     }
+
+
 
     .healthy {
         text-align: center;
