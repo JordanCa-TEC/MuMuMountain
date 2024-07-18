@@ -1,7 +1,7 @@
 $primary-color: #A5E0E7;
 $secondary-color: #ffffff;
 $text-color: #333;
-$background-color: #d36b6b;
+$background-image: url("../img/background-texture.jpg") ;
 $font-stack: 'Arial', sans-serif;
 
 body {
@@ -48,10 +48,12 @@ body {
     .intro {
         text-align: center;
         padding: 2rem;
+        background-image: linear-gradient(rgba(165, 224, 231) 70%, rgba(255, 255, 255, 0) 30%),
+                  url("../img/background-texture.jpg");
 
         &__title {
             font-size: 2rem;
-            color: $primary-color;
+            color: $secondary-color;
         }
 
         &__juices {
@@ -60,7 +62,7 @@ body {
             margin-top: 1rem;
 
             .intro__juice {
-                width: 15%;
+                width: 35%;
                 margin: 0 1rem;
             }
         }
@@ -69,8 +71,8 @@ body {
     .healthy {
         text-align: center;
         padding: 2rem;
-        background-color: $background-color;
-        color: $secondary-color;
+        background-image: $background-image;
+        color: $text-color;
 
         &__title {
             font-size: 1.5rem;
@@ -84,7 +86,7 @@ body {
             display: inline-block;
             padding: 0.5rem 1rem;
             background-color: $secondary-color;
-            color: $background-color;
+            color: $secondary-color;
             text-decoration: none;
 
             &:hover {
@@ -98,7 +100,7 @@ body {
     text-align: center;
     padding: 1rem;
     background-color: $secondary-color;
-    color: $background-color;
+    color: $primary-color;
 
     &__contact {
         margin-top: 1rem;

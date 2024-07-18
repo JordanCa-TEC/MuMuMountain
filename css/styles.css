@@ -36,10 +36,11 @@ body {
 .main .intro {
   text-align: center;
   padding: 2rem;
+  background-image: linear-gradient(rgb(165, 224, 231) 70%, rgba(255, 255, 255, 0) 30%), url("../img/background-texture.jpg");
 }
 .main .intro__title {
   font-size: 2rem;
-  color: #A5E0E7;
+  color: #ffffff;
 }
 .main .intro__juices {
   display: flex;
@@ -47,14 +48,14 @@ body {
   margin-top: 1rem;
 }
 .main .intro__juices .intro__juice {
-  width: 15%;
+  width: 35%;
   margin: 0 1rem;
 }
 .main .healthy {
   text-align: center;
   padding: 2rem;
-  background-color: #d36b6b;
-  color: #ffffff;
+  background-image: url("../img/background-texture.jpg");
+  color: #333;
 }
 .main .healthy__title {
   font-size: 1.5rem;
@@ -66,7 +67,7 @@ body {
   display: inline-block;
   padding: 0.5rem 1rem;
   background-color: #ffffff;
-  color: #d36b6b;
+  color: #ffffff;
   text-decoration: none;
 }
 .main .healthy__link:hover {
@@ -77,7 +78,7 @@ body {
   text-align: center;
   padding: 1rem;
   background-color: #ffffff;
-  color: #d36b6b;
+  color: #A5E0E7;
 }
 .footer__contact {
   margin-top: 1rem;
