@@ -1,8 +1,14 @@
 $primary-color: #A5E0E7;
 $secondary-color: #ffffff;
+$tertiary-color: #F4AA1C;
 $text-color: #333;
+$color-footer: #F3F1E2;
+$text-footer: #38894F;
 $background-image: url("../img/background-texture.jpg") ;
 $font-stack: 'Arial', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Just+Another+Hand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Galindo&family=Josefin+Sans&display=swap');
 
 body {
     font-family: $font-stack;
@@ -14,13 +20,14 @@ body {
 
 .header {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    padding: 1rem;
+    padding: 2rem 0 7rem 0;
     background-color: $primary-color;
 
     &__logo-image {
         max-height: 50px;
+        padding-right: 2rem;
     }
 
     &__nav-list {
@@ -29,16 +36,19 @@ body {
         margin: 0;
         padding: 0;
 
-        &__nav-item {
-            margin-left: 1rem;
+        .header__nav-item {
+            margin: 0 15px;
         }
 
-        &__nav-link {
+        .header__nav-link {
             text-decoration: none;
-            color: $text-color;
+            color: $secondary-color;
+            font-family: "Galindo", sans-serif;
+            font-weight: 400;
+            font-style: normal;
 
             &:hover {
-                color: $secondary-color;
+                color: $text-color;
             }
         }
     }
@@ -47,51 +57,95 @@ body {
 
 .main {
     .intro {
-        display: flex; 
+        display: flex;
         align-items: center; 
         justify-content: center;
         padding: 2rem;
+        margin: 0;
         background-image: linear-gradient(rgba(165, 224, 231) 70%, rgba(255, 255, 255, 0) 30%), url("../img/background-texture.jpg");
         
         &__title {
-            font-size: 4rem;
-            width: 40%;
+            font-size: 6rem;
+            font-family: "Galindo", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            line-height: 80%;
+            width: 45%;
             color: $secondary-color;
-            margin-right: 2rem; 
+            margin-right: 2rem;
+            padding-bottom: 7%; 
+            padding-left: 3%;
         }
 
         .intro__juice-img {
-            width: 35%;
+            width: 32%;
             margin: 0 1rem;
+            z-index: 2;
+        }
+        .intro__destello {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-110%,-50%);
+            width: 40%;
+            z-index: 1;
         }
     }
 
 
 
     .healthy {
+        display: flex;
         text-align: center;
+        justify-content: left;
+        flex-wrap: wrap;
         padding: 2rem;
         background-image: $background-image;
         color: $text-color;
 
         &__title {
-            font-size: 1.5rem;
+            font-size: 12rem;
+            margin: 0;
+            text-align: center;
+            font-family: "Just Another Hand", cursive;
+            font-weight: 400;
+            font-style: normal;
         }
 
         &__description {
             margin: 1rem 0;
+            width: 100%;
+            font-size: 2rem;
+            text-align: left;
+            font-family: "Josefin Sans", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
         }
 
         &__link {
             display: inline-block;
-            padding: 0.5rem 1rem;
-            background-color: $secondary-color;
+            width: 15%;
+            text-align: center;
+            border-radius: 120px;
+            padding: 1rem 2rem;
+            background-color: $tertiary-color;
             color: $secondary-color;
+            font-weight: bold;
             text-decoration: none;
+            box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.5);
 
             &:hover {
                 background-color: darken($secondary-color, 10%);
             }
+        }
+        .healthy__modular{
+            width: 50%;
+            align-content: center;
+        }
+
+        .healthy__foto{
+            width: 45%;
         }
     }
 }
@@ -99,13 +153,14 @@ body {
 .footer {
     text-align: center;
     padding: 1rem;
-    background-color: $secondary-color;
+    background-color: $color-footer;
     color: $primary-color;
 
     &__contact {
         margin-top: 1rem;
 
         &__contact-item {
+            color: $text-footer;
             margin: 0;
         }
     }
