@@ -151,17 +151,53 @@ body {
 }
 
 .footer {
+    width: 100%;
+    background-color: $color-footer;
+    color: $text-footer;
     text-align: center;
     padding: 1rem;
-    background-color: $color-footer;
-    color: $primary-color;
-
-    &__contact {
-        margin-top: 1rem;
-
-        &__contact-item {
-            color: $text-footer;
-            margin: 0;
-        }
+  
+    &__menus {
+      display: flex;
+      justify-content:center;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
     }
-}
+  
+    .footer__contact {
+      margin: 1em 3em;
+      text-align: left;
+  
+      h3 {
+        color: $text-color;
+      }
+  
+      ul {
+        list-style: none;
+        padding: 0;
+      }
+  
+      li {
+        margin-bottom: 15px;
+  
+        a {
+          color: $text-footer;
+          text-decoration: none;
+  
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  
+    &__copyright {
+      font-size: 1.3rem;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+  }
+
+
+
+
