@@ -1,0 +1,33 @@
+$text-color: #333;
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+.commitment{
+    height: 70%;
+
+    .commitment__description {
+        color: $text-color;
+        font-family: "Josefin Sans", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        text-align: justify;
+    }
+
+    .commitment__image{
+        width: 30%;
+    }
+    .commitment__image-logo{
+        width: 50%;
+    }
+    .commitment__image-jugos{
+        width: 50%;
+    }
+    .commitment__details{
+        width: 30%;
+        margin-left: 2rem;
+        margin-bottom: 6rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
