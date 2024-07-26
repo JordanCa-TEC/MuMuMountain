@@ -22,8 +22,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 2rem 0 7rem 0;
+    padding: 2rem 0 0 0;
     background-color: $primary-color;
+    
 
     &__logo-image {
         max-height: 50px;
@@ -57,10 +58,12 @@ body {
 
 .main {
     .intro {
+        height: 80vh;
         display: flex;
         align-items: center; 
         justify-content: center;
         padding: 2rem;
+        padding-top: 10rem;
         margin: 0;
         background-image: linear-gradient(rgba(165, 224, 231) 70%, rgba(255, 255, 255, 0) 30%), url("../img/background-texture.jpg");
         
@@ -86,7 +89,7 @@ body {
             position: absolute;
             top: 50%;
             left: 50%;
-            transform: translate(-110%,-50%);
+            /*transform: translate(-110%,-50%);*/
             width: 40%;
             z-index: 1;
         }
