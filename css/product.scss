@@ -1,53 +1,110 @@
 $text-color: #333;
 $bebidafresa: #FC5972;
-.product {
-    height: 40%;
+$bebidazanahoria: #ffa526;
+$bebidakiwi: #65a512;
 
-    .product__image {
-        width: 20%;
-    }
-    .product__title-01{
-        color: $text-color;
-        margin: 0 auto;
-        padding-bottom: 2%;
-        font-size: 4rem;
-        font-family: "Gugi", sans-serif;
-        font-weight: 400;
-        font-style: normal;
-    }
-    .product__title-02 {
-        color: $bebidafresa;
-        margin: 0 auto;
-        font-size: 4rem;
-        font-family: "Galindo", sans-serif;
-        font-weight: 400;
-        font-style: normal;
-        line-height: 90%;
-    }
-    .product__details {
-        width: 40%;
-    }
-    .product__fruto {
-        width: 80%;
-    }
-    .product__description{
-        width: 60%;
-        color: $text-color;
-        font-family: "Josefin Sans", sans-serif;
-        font-optical-sizing: auto;
-        font-weight: 400;
-        font-style: normal;
-        text-align: justify;
-    }
+.main {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
 
-    button.prev,
-    button.next {
-        font-size: 2rem;
-        background-color: rgba(0, 0, 0, 0);
-        color: white;
-        border: none;
-        padding: 10px;
-        cursor: pointer;
-        z-index: 2;
+    .carousel-container {
+        position: relative;
+        width: 100%;
+        display: flex;
+        align-items: center;
+
+        .carousel {
+            display: flex;
+            width: 300%; // Tres secciones, cada una con 100%
+            transition: transform 0.5s ease-in-out;
+
+            .intro.product {
+                width: 100%;
+                flex-shrink: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+
+                .product__image {
+                    width: 17%;
+                }
+
+                .product__details {
+                    width: 40%;
+
+                    .product__title-01 {
+                        color: $text-color;
+                        margin: 0 auto;
+                        padding-bottom: 2%;
+                        font-size: 4rem;
+                        font-family: "Gugi", sans-serif;
+                        font-weight: 400;
+                        font-style: normal;
+                    }
+
+                    .product__title-02 {
+                        color: $bebidafresa;
+                        margin: 0 auto;
+                        font-size: 4rem;
+                        font-family: "Galindo", sans-serif;
+                        font-weight: 400;
+                        font-style: normal;
+                        line-height: 90%;
+                    }
+
+                    .product__title-03 {
+                        @extend .product__title-02;
+                        color: $bebidazanahoria;
+                    }
+
+
+                   .product__title-04 {
+                        @extend .product__title-02;
+                        color: $bebidakiwi;
+                    }
+
+                    .product__description {
+                        width: 60%;
+                        color: $text-color;
+                        font-family: "Josefin Sans", sans-serif;
+                        font-optical-sizing: auto;
+                        font-weight: 400;
+                        font-style: normal;
+                        text-align: justify;
+                    }
+                }
+
+                .product__fruto {
+                    width: 80%;
+                }
+            }
+        }
+
+        .prev, .next {
+            position: absolute;
+            font-size: 2rem;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0);
+            color: white;
+            border: none;
+            padding: 5px;
+            cursor: pointer;
+            z-index: 999;
+
+            &:hover {
+                background-color: rgba(255, 123, 240, 0.7);
+            }
+        }
+
+        .prev {
+            left: 20%;
+        }
+
+        .next {
+            right: 20%;
+        }
     }
 }
