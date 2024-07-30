@@ -57,6 +57,14 @@ body {
     height: 40vh;
   }
 }
+@media screen and (max-width: 624px) {
+  .main .intro {
+    margin-top: 20vh;
+    height: 2vh;
+    flex-direction: column;
+    background-image: linear-gradient(rgb(165, 224, 231) 60%, rgba(255, 255, 255, 0) 40%), url("../img/background-texture.jpg");
+  }
+}
 .main .intro .intro__title {
   font-size: clamp(2rem, 6vw, 8rem);
   font-family: "Galindo", sans-serif;
@@ -69,11 +77,23 @@ body {
   padding-bottom: 7%;
   padding-left: 3%;
 }
+@media screen and (max-width: 624px) {
+  .main .intro .intro__title {
+    padding-bottom: 0;
+    font-size: 4rem;
+    width: 100%;
+  }
+}
 .main .intro .intro__juice-img {
   position: relative;
   width: 32%;
   margin: 0 1rem;
   z-index: 2;
+}
+@media screen and (max-width: 624px) {
+  .main .intro .intro__juice-img {
+    width: 70%;
+  }
 }
 .main .intro .intro__destello {
   position: absolute;
@@ -117,10 +137,10 @@ body {
 }
 @media screen and (max-width: 624px) {
   .main .intro .intro__destello {
-    top: calc(30% - 80px);
-    left: 46%;
-    max-width: 32%;
-    min-width: 10%;
+    top: calc(28% - 80px);
+    left: 85%;
+    max-width: 150%;
+    min-width: 60%;
   }
 }
 @media screen and (max-width: 580px) {
