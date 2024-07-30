@@ -50,8 +50,13 @@ body {
   margin: 0;
   background-image: linear-gradient(rgb(165, 224, 231) 70%, rgba(255, 255, 255, 0) 30%), url("../img/background-texture.jpg");
 }
-.main .intro__title {
-  font-size: 6rem;
+@media screen and (max-width: 1445px) {
+  .main .intro {
+    height: 40vh;
+  }
+}
+.main .intro .intro__title {
+  font-size: clamp(2rem, 6vw, 8rem);
   font-family: "Galindo", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -63,6 +68,7 @@ body {
   padding-left: 3%;
 }
 .main .intro .intro__juice-img {
+  position: relative;
   width: 32%;
   margin: 0 1rem;
   z-index: 2;
@@ -74,6 +80,14 @@ body {
   /*transform: translate(-110%,-50%);*/
   width: 40%;
   z-index: 1;
+}
+@media screen and (max-width: 1445px) {
+  .main .intro .intro__destello {
+    top: 33%;
+    left: 45%;
+    max-width: 32%;
+    min-width: 20%;
+  }
 }
 .main .healthy {
   display: flex;
