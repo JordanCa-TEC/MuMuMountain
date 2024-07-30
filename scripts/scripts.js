@@ -15,16 +15,15 @@ document.addEventListener('DOMContentLoaded', () => {
 document.addEventListener('DOMContentLoaded', () => {
     const destello = document.getElementById('destello');
     let angle = 0;
-
+  
     const rotate = () => {
-        angle = (angle + 0.05) % 360;
-        destello.style.transform = `translate(-110%, -115%) rotate(${angle}deg)`;
-        requestAnimationFrame(rotate);
+      angle = (angle + 0.05) % 360;
+      destello.style.transform = `rotate(${angle}deg)`;
+      requestAnimationFrame(rotate);
     };
-
+  
     rotate();
-});
-
+  });
 
 ///* scroll de cosas saludables
 document.addEventListener("DOMContentLoaded", function() {
