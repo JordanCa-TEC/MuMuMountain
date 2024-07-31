@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Just+Another+Hand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Galindo&family=Josefin+Sans&display=swap");
@@ -8,7 +9,12 @@ body {
   background-color: #A5E0E7;
   color: #333;
   margin: 0;
-  padding: 0;
+  padding: 5% 0 0 0;
+}
+@media screen and (max-width: 624px) {
+  body {
+    padding: 30% 0 0 0;
+  }
 }
 
 .header {
@@ -83,11 +89,13 @@ body {
 .mobile-nav {
   display: none;
   position: fixed;
+  height: 35%;
+  width: 42%;
   top: 0;
-  left: 0;
+  left: 50%;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.8); /* Fondo semi-transparente */
+  background-color: rgba(57, 194, 248, 0.8); /* Fondo semi-transparente */
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -101,12 +109,19 @@ body {
   width: 100%;
   text-align: center;
 }
+.mobile-nav .custom-line {
+  border: none;
+  height: 4px;
+  background-color: #ffffff; /* Color de la línea */
+  margin: 2px 0; /* Espaciado superior e inferior */
+}
 .mobile-nav .mobile-nav-item {
   margin: 1rem 0;
 }
 .mobile-nav .mobile-nav-link {
   text-decoration: none;
-  color: #fff; /*color del texto */
+  font-family: "Galindo", sans-serif;
+  color: #ffffff; /*color del texto */
   font-weight: 400;
   font-style: normal;
 }
@@ -115,6 +130,7 @@ body {
 }
 .mobile-nav--visible {
   display: flex;
+  justify-content: flex-end;
 }
 
 .header__nav-toggle.is-active .header__nav-toggle-icon:nth-child(1) {
