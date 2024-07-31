@@ -1,26 +1,122 @@
 $text-color: #333;
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
 
+@mixin desktop {
+    @media screen and (max-width: 1445px) {
+        @content
+    }
+};
+
+@mixin tablet {
+    @media screen and (max-width: 980px) {
+        @content
+    }
+};
+
+@mixin mobile {
+    @media screen and (max-width: 480px) {
+        @content
+    }
+};
+
+/*----------------------------*/
+
+// breakpoints medida
+
+@mixin medium {
+    @media screen and (max-width: 624px) {
+        @content
+    }
+};
+
+@mixin tablet__small {
+    @media screen and (max-width: 880px) {
+        @content
+    }
+};
+
+
+.intro__compromiso {
+    height: 100%;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    padding: 2rem;
+    padding-top: 10rem;
+    margin: 0;
+    background-image: linear-gradient(rgba(165, 224, 231) 70%, rgba(255, 255, 255, 0) 30%), url("../img/background-texture.jpg");
+    align-items: flex-start;
+
+    @include desktop {
+        height: 38vh;
+    }
+    @include medium() {
+        width: 100%;
+        margin-top: 35vh;
+        height: 2vh;
+        flex-direction: column;
+        background-image: linear-gradient(rgb(165, 224, 231) 80%, rgba(255, 255, 255, 0) 20%), url("../img/background-texture.jpg");
+    }
+    @include mobile() {
+        margin-top: 25vh;
+        height: 2vh;
+        flex-direction: column;
+        background-image: linear-gradient(rgb(165, 224, 231) 75%, rgba(255, 255, 255, 0) 25%), url("../img/background-texture.jpg");
+    }
+}
+
 .commitment{
-    height: 70%;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 5rem 0 0 0;
+
+    @include medium{
+        display: flex;
+        align-items: center;
+        padding-top: 2rem;
+    }
 
     .commitment__description {
         color: $text-color;
         font-family: "Josefin Sans", sans-serif;
+        font-size: clamp(1rem, 1.6vw, 2rem);
         font-optical-sizing: auto;
         font-weight: 400;
         font-style: normal;
         text-align: justify;
+
+        @include medium{
+            width: 100%; 
+        }
     }
 
     .commitment__image{
         width: 30%;
+
+        @include desktop{
+            width: 45%; 
+        }
+
+        @include tablet{
+            width: 55%;
+        }
+        @include medium(){
+            width: 85%;
+        }
     }
     .commitment__image-logo{
         width: 50%;
     }
     .commitment__image-jugos{
         width: 50%;
+
+        @include desktop{
+            width: 75%;
+        }
+        @include tablet{
+            width: 95%;
+        }
     }
     .commitment__details{
         width: 30%;
@@ -29,5 +125,11 @@ $text-color: #333;
         display: flex;
         flex-direction: column;
         align-items: center;
+
+        @include medium{
+        margin-left: 0;
+        padding-top: 2rem;
+        width: 90%;  
+        }
     }
 }
