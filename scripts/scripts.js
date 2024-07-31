@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
         navToggle.classList.toggle('is-active');
       });
   
-      // Ocultar el menú cuando se hace clic en un enlace del menú
+      /// Ocultar el menú cuando se hace clic en un enlace del menú
       const navLinks = document.querySelectorAll('.mobile-nav-link');
       navLinks.forEach(link => {
         link.addEventListener('click', () => {
