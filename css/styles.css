@@ -57,6 +57,13 @@ body {
     height: 38vh;
   }
 }
+@media screen and (max-width: 980px) {
+  .main .intro {
+    margin-top: 1vh;
+    height: 18vh;
+    background-image: linear-gradient(rgb(165, 224, 231) 80%, rgba(255, 255, 255, 0) 20%), url("../img/background-texture.jpg");
+  }
+}
 @media screen and (max-width: 624px) {
   .main .intro {
     margin-top: 35vh;
@@ -145,10 +152,18 @@ body {
 .main .healthy .healthy__title {
   font-size: clamp(4rem, 12vw, 14rem);
   margin: 0;
+  width: auto;
   text-align: center;
   font-family: "Just Another Hand", cursive;
   font-weight: 400;
   font-style: normal;
+}
+@media screen and (max-width: 480px) {
+  .main .healthy .healthy__title {
+    font-size: 7rem;
+    line-height: 5rem;
+    text-align: center;
+  }
 }
 .main .healthy .healthy__description {
   margin: 1rem 0;
@@ -194,6 +209,11 @@ body {
 .main .healthy .healthy__modular {
   width: 50%;
   align-content: center;
+}
+@media screen and (max-width: 480px) {
+  .main .healthy .healthy__modular {
+    width: 95%;
+  }
 }
 .main .healthy .healthy__foto {
   width: 45%;

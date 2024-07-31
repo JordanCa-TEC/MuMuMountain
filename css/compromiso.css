@@ -1,23 +1,99 @@
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
+/*----------------------------*/
+.intro__compromiso {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  padding-top: 10rem;
+  margin: 0;
+  background-image: linear-gradient(rgb(165, 224, 231) 70%, rgba(255, 255, 255, 0) 30%), url("../img/background-texture.jpg");
+  align-items: flex-start;
+}
+@media screen and (max-width: 1445px) {
+  .intro__compromiso {
+    height: 38vh;
+  }
+}
+@media screen and (max-width: 624px) {
+  .intro__compromiso {
+    width: 100%;
+    margin-top: 35vh;
+    height: 2vh;
+    flex-direction: column;
+    background-image: linear-gradient(rgb(165, 224, 231) 80%, rgba(255, 255, 255, 0) 20%), url("../img/background-texture.jpg");
+  }
+}
+@media screen and (max-width: 480px) {
+  .intro__compromiso {
+    margin-top: 25vh;
+    height: 2vh;
+    flex-direction: column;
+    background-image: linear-gradient(rgb(165, 224, 231) 75%, rgba(255, 255, 255, 0) 25%), url("../img/background-texture.jpg");
+  }
+}
+
 .commitment {
-  height: 70%;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 5rem 0 0 0;
+}
+@media screen and (max-width: 624px) {
+  .commitment {
+    display: flex;
+    align-items: center;
+    padding-top: 2rem;
+  }
 }
 .commitment .commitment__description {
   color: #333;
   font-family: "Josefin Sans", sans-serif;
+  font-size: clamp(1rem, 1.6vw, 2rem);
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
   text-align: justify;
 }
+@media screen and (max-width: 624px) {
+  .commitment .commitment__description {
+    width: 100%;
+  }
+}
 .commitment .commitment__image {
   width: 30%;
+}
+@media screen and (max-width: 1445px) {
+  .commitment .commitment__image {
+    width: 45%;
+  }
+}
+@media screen and (max-width: 980px) {
+  .commitment .commitment__image {
+    width: 55%;
+  }
+}
+@media screen and (max-width: 624px) {
+  .commitment .commitment__image {
+    width: 85%;
+  }
 }
 .commitment .commitment__image-logo {
   width: 50%;
 }
 .commitment .commitment__image-jugos {
   width: 50%;
+}
+@media screen and (max-width: 1445px) {
+  .commitment .commitment__image-jugos {
+    width: 75%;
+  }
+}
+@media screen and (max-width: 980px) {
+  .commitment .commitment__image-jugos {
+    width: 95%;
+  }
 }
 .commitment .commitment__details {
   width: 30%;
@@ -26,4 +102,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+@media screen and (max-width: 624px) {
+  .commitment .commitment__details {
+    margin-left: 0;
+    padding-top: 2rem;
+    width: 90%;
+  }
 }/*# sourceMappingURL=compromiso.css.map */
