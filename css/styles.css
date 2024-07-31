@@ -57,6 +57,13 @@ body {
     height: 38vh;
   }
 }
+@media screen and (max-width: 980px) {
+  .main .intro {
+    margin-top: 1vh;
+    height: 18vh;
+    background-image: linear-gradient(rgb(165, 224, 231) 80%, rgba(255, 255, 255, 0) 20%), url("../img/background-texture.jpg");
+  }
+}
 @media screen and (max-width: 624px) {
   .main .intro {
     margin-top: 35vh;
