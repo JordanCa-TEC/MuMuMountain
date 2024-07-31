@@ -59,7 +59,7 @@ body {
 }
 @media screen and (max-width: 624px) {
   .main .intro {
-    margin-top: 20vh;
+    margin-top: 35vh;
     height: 2vh;
     flex-direction: column;
     background-image: linear-gradient(rgba(165, 224, 231, 0) 40%, rgba(255, 255, 255, 0) 60%), url("../img/background-texture.jpg");
@@ -67,7 +67,7 @@ body {
 }
 @media screen and (max-width: 480px) {
   .main .intro {
-    margin-top: 18vh;
+    margin-top: 25vh;
     height: 2vh;
     flex-direction: column;
     background-image: linear-gradient(rgba(165, 224, 231, 0) 50%, rgba(255, 255, 255, 0) 50%), url("../img/background-texture.jpg");
