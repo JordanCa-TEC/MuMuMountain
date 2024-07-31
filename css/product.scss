@@ -2,6 +2,7 @@ $text-color: #333;
 $bebidafresa: #FC5972;
 $bebidazanahoria: #ffa526;
 $bebidakiwi: #65a512;
+$text-color-02: rgb(92, 38, 7);
 
 @mixin desktop {
     @media screen and (max-width: 1445px) {
@@ -88,10 +89,10 @@ $bebidakiwi: #65a512;
         }
 
         @include medium{
-            height: 180vw;
+            height: 50em;
             align-content: center;
             width: 100%;
-            padding: 3% 0 3 0;
+            padding: 0 0 73% 0;
         }
 
         .carousel {
@@ -125,35 +126,46 @@ $bebidakiwi: #65a512;
                         width: 23%;
                     }
 
-                    @include medium(){
+                    @include medium{
                         width: 16%;
                     }
                 }
 
                 .product__details {
                     width: 40%;
+                    
+                    @include medium{
+                        width: 30%;
+                    }
 
                     .product__title-01 {
                         color: $text-color;
                         margin: 0 auto;
                         padding-bottom: 2%;
-                        //font-size: 4rem;
                         font-size: clamp(2rem, 6vw, 8rem);
                         font-family: "Gugi", sans-serif;
                         font-weight: 400;
                         font-style: normal;
+
+                        @include medium {
+                            text-align: center;
+                        }
                         
                     }
 
                     .product__title-02 {
                         color: $bebidafresa;
                         margin: 0 auto;
-                        //font-size: 4rem;
                         font-size: clamp(2rem, 4vw, 6rem);
                         font-family: "Galindo", sans-serif;
                         font-weight: 400;
                         font-style: normal;
                         line-height: 90%;
+
+                        @include medium {
+                            text-align: center;
+                            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+                        }
                     }
 
                     .product__title-03 {
@@ -179,6 +191,18 @@ $bebidakiwi: #65a512;
                         @include desktop{
                             width: 90%;
                         }
+
+                        @include medium{
+                            font-size: 1.5rem;
+                            font-weight: bold;
+                            width: 100%;
+                            color: $text-color-02;
+                        }
+
+                        @include mobile{
+                            font-size: 1.3rem;
+                            text-align: center;
+                        }
                     }
                 }
 
@@ -187,6 +211,7 @@ $bebidakiwi: #65a512;
 
                     @include desktop{
                         width: 60%;
+                        padding-left: 20%;
                     }
                 }
             }
