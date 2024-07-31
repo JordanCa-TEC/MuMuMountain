@@ -188,14 +188,20 @@ body {
             justify-content: center;
         }
 
-        .healthy__title {
-            
+        .healthy__title { 
             font-size: clamp(4rem, 12vw, 14rem);
             margin: 0;
+            width: auto;
             text-align: center;
             font-family: "Just Another Hand", cursive;
             font-weight: 400;
             font-style: normal;
+
+            @include mobile{
+                font-size: 7rem;
+                line-height: 5rem;
+                text-align: center;
+            }
         }
 
         .healthy__description {
@@ -239,6 +245,10 @@ body {
         .healthy__modular{
             width: 50%;
             align-content: center;
+        
+            @include mobile{
+                width: 95%;
+            }
         }
 
         .healthy__foto{
