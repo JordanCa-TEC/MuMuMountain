@@ -1,58 +1,132 @@
+/*----------------------------*/
 .main {
   position: relative;
   width: 100%;
   overflow: hidden;
+}
+.main .intro__tablet {
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  padding-top: 10rem;
+  margin: 0;
+  background-image: linear-gradient(rgb(165, 224, 231) 70%, rgba(255, 255, 255, 0) 30%), url("../img/background-texture.jpg");
+}
+@media screen and (max-width: 1445px) {
+  .main .intro__tablet {
+    height: 38vh;
+  }
+}
+@media screen and (max-width: 624px) {
+  .main .intro__tablet {
+    margin-top: 35vh;
+    height: 2vh;
+    flex-direction: column;
+    background-image: linear-gradient(rgb(165, 224, 231) 50%, rgba(255, 255, 255, 0) 50%), url("../img/background-texture.jpg");
+  }
+}
+@media screen and (max-width: 480px) {
+  .main .intro__tablet {
+    margin-top: 25vh;
+    height: 2vh;
+    flex-direction: column;
+    background-image: linear-gradient(rgb(165, 224, 231) 50%, rgba(255, 255, 255, 0) 50%), url("../img/background-texture.jpg");
+  }
 }
 .main .carousel-container {
   position: relative;
   width: 100%;
   display: flex;
   align-items: center;
+  padding: 10% 0 0 0;
+  margin: 0;
+}
+@media screen and (max-width: 1445px) {
+  .main .carousel-container {
+    width: 100%;
+    height: 50vw;
+    padding: 5% 0 5% 0;
+  }
+}
+@media screen and (max-width: 980px) {
+  .main .carousel-container {
+    padding: 10% 0 10% 0;
+  }
+}
+@media screen and (max-width: 624px) {
+  .main .carousel-container {
+    height: 180vw;
+    align-content: center;
+    width: 100%;
+    padding: 3% 0 3 0;
+  }
 }
 .main .carousel-container .carousel {
   display: flex;
   width: 300%;
   transition: transform 0.5s ease-in-out;
 }
-.main .carousel-container .carousel .intro.product {
+.main .carousel-container .carousel .intro {
   width: 100%;
+}
+.main .carousel-container .carousel .product {
+  width: 100%;
+  padding: 0;
   flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
+  background-image: none;
 }
-.main .carousel-container .carousel .intro.product .product__image {
+.main .carousel-container .carousel .product .product__image {
   width: 17%;
 }
-.main .carousel-container .carousel .intro.product .product__details {
+@media screen and (max-width: 1445px) {
+  .main .carousel-container .carousel .product .product__image {
+    width: 20%;
+  }
+}
+@media screen and (max-width: 980px) {
+  .main .carousel-container .carousel .product .product__image {
+    width: 23%;
+  }
+}
+@media screen and (max-width: 624px) {
+  .main .carousel-container .carousel .product .product__image {
+    width: 16%;
+  }
+}
+.main .carousel-container .carousel .product .product__details {
   width: 40%;
 }
-.main .carousel-container .carousel .intro.product .product__details .product__title-01 {
+.main .carousel-container .carousel .product .product__details .product__title-01 {
   color: #333;
   margin: 0 auto;
   padding-bottom: 2%;
-  font-size: 4rem;
+  font-size: clamp(2rem, 6vw, 8rem);
   font-family: "Gugi", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
-.main .carousel-container .carousel .intro.product .product__details .product__title-02, .main .carousel-container .carousel .intro.product .product__details .product__title-04, .main .carousel-container .carousel .intro.product .product__details .product__title-03 {
+.main .carousel-container .carousel .product .product__details .product__title-02, .main .carousel-container .carousel .product .product__details .product__title-04, .main .carousel-container .carousel .product .product__details .product__title-03 {
   color: #FC5972;
   margin: 0 auto;
-  font-size: 4rem;
+  font-size: clamp(2rem, 4vw, 6rem);
   font-family: "Galindo", sans-serif;
   font-weight: 400;
   font-style: normal;
   line-height: 90%;
 }
-.main .carousel-container .carousel .intro.product .product__details .product__title-03 {
+.main .carousel-container .carousel .product .product__details .product__title-03 {
   color: #ffa526;
 }
-.main .carousel-container .carousel .intro.product .product__details .product__title-04 {
+.main .carousel-container .carousel .product .product__details .product__title-04 {
   color: #65a512;
 }
-.main .carousel-container .carousel .intro.product .product__details .product__description {
+.main .carousel-container .carousel .product .product__details .product__description {
   width: 60%;
   color: #333;
   font-family: "Josefin Sans", sans-serif;
@@ -61,8 +135,18 @@
   font-style: normal;
   text-align: justify;
 }
-.main .carousel-container .carousel .intro.product .product__fruto {
+@media screen and (max-width: 1445px) {
+  .main .carousel-container .carousel .product .product__details .product__description {
+    width: 90%;
+  }
+}
+.main .carousel-container .carousel .product .product__fruto {
   width: 80%;
+}
+@media screen and (max-width: 1445px) {
+  .main .carousel-container .carousel .product .product__fruto {
+    width: 60%;
+  }
 }
 .main .carousel-container .prev, .main .carousel-container .next {
   position: absolute;
@@ -80,8 +164,8 @@
   background-color: rgba(255, 123, 240, 0.7);
 }
 .main .carousel-container .prev {
-  left: 20%;
+  left: 5%;
 }
 .main .carousel-container .next {
-  right: 20%;
+  right: 5%;
 }/*# sourceMappingURL=product.css.map */

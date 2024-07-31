@@ -3,32 +3,131 @@ $bebidafresa: #FC5972;
 $bebidazanahoria: #ffa526;
 $bebidakiwi: #65a512;
 
+@mixin desktop {
+    @media screen and (max-width: 1445px) {
+        @content
+    }
+};
+
+@mixin tablet {
+    @media screen and (max-width: 980px) {
+        @content
+    }
+};
+
+@mixin mobile {
+    @media screen and (max-width: 480px) {
+        @content
+    }
+};
+
+/*----------------------------*/
+
+// breakpoints medida
+
+@mixin medium {
+    @media screen and (max-width: 624px) {
+        @content
+    }
+};
+
+@mixin small {
+    @media screen and (max-width: 580px) {
+        @content
+    }
+};
+
 .main {
     position: relative;
     width: 100%;
     overflow: hidden;
 
+    .intro__tablet {
+        height: 80vh;
+        //height: 100%;
+        display: flex;
+        align-items: center; 
+        justify-content: center;
+        padding: 2rem;
+        padding-top: 10rem;
+        margin: 0;
+        background-image: linear-gradient(rgba(165, 224, 231) 70%, rgba(255, 255, 255, 0) 30%), url("../img/background-texture.jpg");
+        
+        @include desktop {
+            height: 38vh;
+        }
+        @include medium() {
+            margin-top: 35vh;
+            height: 2vh;
+            flex-direction: column;
+            background-image: linear-gradient(rgb(165, 224, 231) 50%, rgba(255, 255, 255, 0) 50%), url("../img/background-texture.jpg");
+        }
+        @include mobile() {
+            margin-top: 25vh;
+            height: 2vh;
+            flex-direction: column;
+            background-image: linear-gradient(rgb(165, 224, 231) 50%, rgba(255, 255, 255, 0) 50%), url("../img/background-texture.jpg");
+        }
+    }
     .carousel-container {
         position: relative;
         width: 100%;
         display: flex;
         align-items: center;
+        padding: 10% 0 0 0;
+        margin: 0;
+
+        @include desktop{
+            width: 100%;
+            height: 50vw;
+            padding: 5% 0 5% 0;
+        }
+
+        @include tablet{
+            padding: 10% 0 10% 0;
+        }
+
+        @include medium{
+            height: 180vw;
+            align-content: center;
+            width: 100%;
+            padding: 3% 0 3 0;
+        }
 
         .carousel {
             display: flex;
             width: 300%; // Tres secciones, cada una con 100%
             transition: transform 0.5s ease-in-out;
 
-            .intro.product {
+
+            .intro{
                 width: 100%;
+            }
+
+            .product {
+                width: 100%;
+                padding: 0;
                 flex-shrink: 0;
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 position: relative;
+                background-image: none;
 
                 .product__image {
                     width: 17%;
+
+                    @include desktop{
+                        width: 20%;
+                    }
+
+                    @include tablet{
+                        width: 23%;
+                    }
+
+                    @include medium(){
+                        width: 16%;
+                    }
                 }
 
                 .product__details {
@@ -38,16 +137,19 @@ $bebidakiwi: #65a512;
                         color: $text-color;
                         margin: 0 auto;
                         padding-bottom: 2%;
-                        font-size: 4rem;
+                        //font-size: 4rem;
+                        font-size: clamp(2rem, 6vw, 8rem);
                         font-family: "Gugi", sans-serif;
                         font-weight: 400;
                         font-style: normal;
+                        
                     }
 
                     .product__title-02 {
                         color: $bebidafresa;
                         margin: 0 auto;
-                        font-size: 4rem;
+                        //font-size: 4rem;
+                        font-size: clamp(2rem, 4vw, 6rem);
                         font-family: "Galindo", sans-serif;
                         font-weight: 400;
                         font-style: normal;
@@ -73,11 +175,19 @@ $bebidakiwi: #65a512;
                         font-weight: 400;
                         font-style: normal;
                         text-align: justify;
+
+                        @include desktop{
+                            width: 90%;
+                        }
                     }
                 }
 
                 .product__fruto {
                     width: 80%;
+
+                    @include desktop{
+                        width: 60%;
+                    }
                 }
             }
         }
@@ -100,11 +210,11 @@ $bebidakiwi: #65a512;
         }
 
         .prev {
-            left: 20%;
+            left: 5%;
         }
 
         .next {
-            right: 20%;
+            right: 5%;
         }
     }
 }

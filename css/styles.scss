@@ -95,6 +95,7 @@ body {
 .main {
     .intro {
         height: 80vh;
+        //height: 100%;
         display: flex;
         align-items: center; 
         justify-content: center;
@@ -128,7 +129,7 @@ body {
             width: 45%;
             color: $secondary-color;
             margin-right: 2rem;
-            padding-bottom: 7%; 
+            padding-bottom: 12%; 
             padding-left: 3%;
 
             @include medium {
