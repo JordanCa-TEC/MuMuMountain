@@ -61,13 +61,13 @@ $text-color-02: rgb(92, 38, 7);
             margin-top: 35vh;
             height: 2vh;
             flex-direction: column;
-            background-image: linear-gradient(rgb(165, 224, 231) 50%, rgba(255, 255, 255, 0) 50%), url("../img/background-texture.jpg");
+            background-image: linear-gradient(rgb(165, 224, 231) 30%, rgba(255, 255, 255, 0) 30%), url("../img/background-texture.jpg");
         }
         @include mobile() {
             margin-top: 25vh;
             height: 2vh;
             flex-direction: column;
-            background-image: linear-gradient(rgb(165, 224, 231) 50%, rgba(255, 255, 255, 0) 50%), url("../img/background-texture.jpg");
+            background-image: linear-gradient(rgb(165, 224, 231) 30%, rgba(255, 255, 255, 0) 30%), url("../img/background-texture.jpg");
         }
     }
     .carousel-container {
