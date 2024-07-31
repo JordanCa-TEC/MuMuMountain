@@ -15,31 +15,118 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2rem 0 0 0;
+  padding: 2rem;
   background-color: #A5E0E7;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+@media screen and (max-width: 480px) {
+  .header {
+    justify-content: space-between;
+  }
 }
 .header__logo-image {
   max-height: 50px;
-  padding-right: 2rem;
 }
 .header__nav-list {
+  font-size: 1.8vh;
   display: flex;
   list-style: none;
   margin: 0;
   padding: 0;
+}
+@media screen and (max-width: 624px) {
+  .header__nav-list {
+    font-size: 1.15vh;
+  }
 }
 .header__nav-list .header__nav-item {
   margin: 0 15px;
 }
 .header__nav-list .header__nav-link {
   text-decoration: none;
-  color: #ffffff;
   font-family: "Galindo", sans-serif;
+  color: #ffffff;
   font-weight: 400;
   font-style: normal;
 }
 .header__nav-list .header__nav-link:hover {
   color: #333;
+}
+.header__nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 1rem;
+}
+.header__nav-toggle-icon {
+  width: 25px;
+  height: 3px;
+  background-color: #ff69b4; /* ejemplo de color secundario */
+  display: block;
+  margin: 5px 0;
+  transition: all 0.3s;
+}
+@media screen and (max-width: 480px) {
+  .header__nav-list {
+    display: none;
+  }
+  .header__nav-toggle {
+    display: block;
+  }
+}
+
+.mobile-nav {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8); /* Fondo semi-transparente */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+.mobile-nav-list {
+  flex-direction: column;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  text-align: center;
+}
+.mobile-nav .mobile-nav-item {
+  margin: 1rem 0;
+}
+.mobile-nav .mobile-nav-link {
+  text-decoration: none;
+  color: #fff; /*color del texto */
+  font-weight: 400;
+  font-style: normal;
+}
+.mobile-nav .mobile-nav-link:hover {
+  color: #ff69b4; /* ejemplo de color secundario */
+}
+.mobile-nav--visible {
+  display: flex;
+}
+
+.header__nav-toggle.is-active .header__nav-toggle-icon:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.header__nav-toggle.is-active .header__nav-toggle-icon:nth-child(2) {
+  opacity: 0;
+}
+
+.header__nav-toggle.is-active .header__nav-toggle-icon:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
 }
 
 .main .intro {
