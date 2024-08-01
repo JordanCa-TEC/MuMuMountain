@@ -131,7 +131,7 @@ body {
   .mobile-nav {
     display: none;
     position: fixed;
-    height: 22%;
+    height: 28%;
     width: 100%;
     top: 0;
     left: 0;
@@ -177,7 +177,8 @@ body {
     }
   
     &--visible {
-      position: relative;
+      position: fixed;
+      top: 18%;
       display: flex;
       justify-content: flex-end;
     }
