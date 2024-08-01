@@ -64,7 +64,7 @@ body {
     right: 0;
     z-index: 1000; 
     
-    @include mobile{
+    @include medium{
         justify-content: space-between;
     }
 
@@ -117,7 +117,7 @@ body {
       }
     }
   
-    @include mobile {
+    @include medium { //cambio realizado
       &__nav-list {
         display: none;
       }

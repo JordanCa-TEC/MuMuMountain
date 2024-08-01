@@ -38,8 +38,8 @@ $text-color-02: rgb(92, 38, 7);
     overflow: hidden;
 
     .intro__tablet {
-        height: 80vh;
-        //height: 100%;
+        //height: 80vh;
+        height: 100%;
         display: flex;
         align-items: center; 
         justify-content: center;
@@ -159,18 +159,27 @@ $text-color-02: rgb(92, 38, 7);
                         @include medium {
                             text-align: center;
                             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+                            color: white;
                         }
                     }
 
                     .product__title-03 {
                         @extend .product__title-02;
                         color: $bebidazanahoria;
+
+                        @include medium {
+                            color: white;
+                        }
                     }
 
 
                    .product__title-04 {
                         @extend .product__title-02;
                         color: $bebidakiwi;
+
+                        @include medium {
+                            color: white;
+                        }
                     }
 
                     .product__description {
