@@ -92,8 +92,7 @@ body {
 .mobile-nav {
   display: none;
   position: fixed;
-  height: 32vh;
-  width: 100%;
+  height: 100%;
   top: 0;
   left: 0;
   right: 0;
@@ -102,7 +101,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  z-index: 900;
+  z-index: 999;
 }
 .mobile-nav-list {
   list-style: none;
@@ -132,7 +131,8 @@ body {
 }
 .mobile-nav--visible {
   display: flex;
-  justify-content: flex-end;
+  padding: 20% 20% 0;
+  justify-content: center;
 }
 
 .header__nav-toggle.is-active .header__nav-toggle-icon:nth-child(1) {
@@ -338,7 +338,6 @@ body {
 }
 
 .footer {
-  width: 100%;
   height: 100%;
   background-color: #F3F1E2;
   color: #38894F;
