@@ -131,7 +131,7 @@ body {
 }
 .mobile-nav--visible {
   display: flex;
-  padding: 20% 20% 0;
+  padding: 20% 20% 0; /*bordes adicionales*/
   justify-content: center;
 }
 
