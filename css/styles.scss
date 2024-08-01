@@ -81,6 +81,7 @@ body {
 
       @include medium{
         font-size: 1.15vh;
+        display: none;
       }
   
       .header__nav-item {
@@ -106,7 +107,11 @@ body {
       border: none;
       cursor: pointer;
       padding: 1rem;
-  
+      
+      @include medium { 
+          display: block;
+      }
+
       &-icon {
         width: 25px;
         height: 3px;
@@ -114,16 +119,10 @@ body {
         display: block;
         margin: 5px 0;
         transition: all 0.3s;
-      }
-    }
-  
-    @include medium { //cambio realizado
-      &__nav-list {
-        display: none;
-      }
-  
-      &__nav-toggle {
-        display: block;
+
+        @include medium {
+          display: block;
+        }
       }
     }
   }
@@ -131,7 +130,7 @@ body {
   .mobile-nav {
     display: none;
     position: fixed;
-    height: 28%;
+    height: 32vh;
     width: 100%;
     top: 0;
     left: 0;
@@ -144,8 +143,6 @@ body {
     z-index: 900;
   
     &-list {
-      position: relative;
-      flex-direction: column;
       list-style: none;
       margin: 0;
       padding: 4% 0 0 0;
@@ -177,8 +174,6 @@ body {
     }
   
     &--visible {
-      position: fixed;
-      top: 18%;
       display: flex;
       justify-content: flex-end;
     }

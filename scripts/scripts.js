@@ -1,25 +1,13 @@
 ///*Rajuste de pantalla - menu hamburguesa
-document.addEventListener('DOMContentLoaded', () => {
+  document.addEventListener('DOMContentLoaded', () => {
     const navToggle = document.querySelector('.header__nav-toggle');
     const mobileNav = document.querySelector('.mobile-nav');
   
-    if (navToggle && mobileNav) {
-      navToggle.addEventListener('click', () => {
-        mobileNav.classList.toggle('mobile-nav--visible');
-        navToggle.classList.toggle('is-active');
-      });
-  
-      /// Ocultar el menú cuando se hace clic en un enlace del menú
-      const navLinks = document.querySelectorAll('.mobile-nav-link');
-      navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-          mobileNav.classList.remove('mobile-nav--visible');
-          navToggle.classList.remove('is-active');
-        });
-      });
-    }
+    navToggle.addEventListener('click', () => {
+      navToggle.classList.toggle('is-active');
+      mobileNav.classList.toggle('mobile-nav--visible');
+    });
   });
-  
 
 ///*Rotación del destello
 document.addEventListener('DOMContentLoaded', () => {
