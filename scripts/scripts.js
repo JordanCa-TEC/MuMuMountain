@@ -147,36 +147,68 @@ style.innerHTML = `
 document.head.appendChild(style);
 
 
-
 ///*Animación carrucel
 const prevBtn = document.querySelector('.prev');
-        const nextBtn = document.querySelector('.next');
-        const carousel = document.querySelector('.carousel');
-        const sections = document.querySelectorAll('.intro.product');
-        let currentIndex = 0;
+const nextBtn = document.querySelector('.next');
+const carousel = document.querySelector('.carousel');
+const sections = document.querySelectorAll('.intro.product');
+let currentIndex = 0;
 
-        function updateCarousel() {
-            const offset = -100 * currentIndex;
-            carousel.style.transform = `translateX(${offset}%)`;
+function updateCarousel() {
+    const offset = -100 * currentIndex;
+    carousel.style.transform = `translateX(${offset}%)`;
+}
+
+nextBtn.addEventListener('click', () => {
+    if (currentIndex < sections.length - 1) {
+        currentIndex++;
+    } else {
+        currentIndex = 0;
+    }
+    updateCarousel();
+});
+
+prevBtn.addEventListener('click', () => {
+    if (currentIndex > 0) {
+        currentIndex--;
+    } else {
+        currentIndex = sections.length - 1;
+    }
+    updateCarousel();
+});
+
+// Touch functionality
+let startX = 0;
+let endX = 0;
+
+carousel.addEventListener('touchstart', (event) => {
+    startX = event.touches[0].clientX;
+});
+
+carousel.addEventListener('touchmove', (event) => {
+    endX = event.touches[0].clientX;
+});
+
+carousel.addEventListener('touchend', () => {
+    if (startX > endX + 50) {
+        // Swipe left
+        if (currentIndex < sections.length - 1) {
+            currentIndex++;
+        } else {
+            currentIndex = 0;
         }
+    } else if (startX < endX - 50) {
+        // Swipe right
+        if (currentIndex > 0) {
+            currentIndex--;
+        } else {
+            currentIndex = sections.length - 1;
+        }
+    }
+    updateCarousel();
+});
 
-        nextBtn.addEventListener('click', () => {
-            if (currentIndex < sections.length - 1) {
-                currentIndex++;
-            } else {
-                currentIndex = 0;
-            }
-            updateCarousel();
-        });
+// Initial display
+updateCarousel();
 
-        prevBtn.addEventListener('click', () => {
-            if (currentIndex > 0) {
-                currentIndex--;
-            } else {
-                currentIndex = sections.length - 1;
-            }
-            updateCarousel();
-        });
-
-        // Initial display
-        updateCarousel();
+        
