@@ -225,7 +225,7 @@ body {
         }
 
         .intro__title {
-            font-size: clamp(2rem, 6vw, 8rem);
+            font-size: clamp(3rem, 5vw, 8rem);
             font-family: "Galindo", sans-serif;
             font-weight: 400;
             font-style: normal;
@@ -238,7 +238,6 @@ body {
 
             @include medium {
                 padding-bottom: 0;
-                font-size: 4rem;
                 width: 100%;
                 text-align: center;
             }
